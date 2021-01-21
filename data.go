@@ -401,17 +401,17 @@ func decodeURL(s string) (string, error) {
 		return s, nil
 	}
 
-	// perserve original value in case we are not able to decode
-	decodedUrl := s
+	// preserve original value in case we are not able to decode
+	decodedURL := s
 	maxDecodeAttempts := 3
-	for i := 0; !reDecodedURL.MatchString(decodedUrl) && i < maxDecodeAttempts; i++ {
-		decodedUrl, err = url.QueryUnescape(decodedUrl)
+	for i := 0; !reDecodedURL.MatchString(decodedURL) && i < maxDecodeAttempts; i++ {
+		decodedURL, err = url.QueryUnescape(decodedURL)
 		if err != nil {
 			return "", URLError{"remote URL could not be decoded", nil}
 		}
 	}
-	if reDecodedURL.MatchString(decodedUrl) {
-		return decodedUrl, nil
+	if reDecodedURL.MatchString(decodedURL) {
+		return decodedURL, nil
 	} else {
 		// return original value. might be relative url (e.g. https/foo.jpg)
 		return s, nil
