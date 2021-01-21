@@ -292,20 +292,4 @@ func TestNewRequest_BaseURL(t *testing.T) {
 			t.Errorf("NewRequest(%q, %q) request options = %v, want %v", tt.URL, tt.BaseURL, got, want)
 		}
 	}
-
-
-
-	// req, _ := http.NewRequest("GET", "/x/path", nil)
-	// base, _ := url.Parse("https://example.com/")
-
-	// r, err := NewRequest(req, base)
-	// if err != nil {
-	// 	t.Errorf("NewRequest(%v, %v) returned unexpected error: %v", req, base, err)
-	// }
-
-	// want := "https://example.com/path#0x0"
-	// if got := r.String(); got != want {
-	// 	t.Errorf("NewRequest(%v, %v) returned %q, want %q", req, base, got, want)
-	// }
-
 }
