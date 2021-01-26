@@ -68,8 +68,7 @@ x0.15   | 15% original height, proportional width  | <a href="https://imageproxy
 200x,q60 | 200px wide, proportional height, 60% quality | <a href="https://imageproxy.willnorris.com/200x,q60/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/200x,q60/https://willnorris.com/2013/12/small-things.jpg" alt="200x,q60"></a>
 200x,png | 200px wide, converted to PNG format | <a href="https://imageproxy.willnorris.com/200x,png/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/200x,png/https://willnorris.com/2013/12/small-things.jpg" alt="200x,png"></a>
 cx175,cw400,ch300,100x | crop to 400x300px starting at (175,0), scale to 100px wide | <a href="https://imageproxy.willnorris.com/cx175,cw400,ch300,100x/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/cx175,cw400,ch300,100x/https://willnorris.com/2013/12/small-things.jpg" alt="cx175,cw400,ch300,100x"></a>
-0x0 | no option | <a href="https://imageproxy.willnorris.com/0x0/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/0x0/https://willnorris.com/2013/12/small-things.jpg" alt="0x0"></a>
-x | no option | <a href="https://imageproxy.willnorris.com/x/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/x/https://willnorris.com/2013/12/small-things.jpg" alt="x"></a>
+x | no options, don't transform, just proxy | <a href="https://imageproxy.willnorris.com/x/https://willnorris.com/2013/12/small-things.jpg"><img src="https://imageproxy.willnorris.com/x/https://willnorris.com/2013/12/small-things.jpg" alt="x"></a>
 
 The [smart crop feature](https://godoc.org/willnorris.com/go/imageproxy#hdr-Smart_Crop)
 can best be seen by comparing crops of [this source image][judah-sheets], with
