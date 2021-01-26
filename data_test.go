@@ -193,6 +193,12 @@ func TestNewRequest(t *testing.T) {
 			"http://localhost/x/https%25253A%25252F%25252Fexample.com%25252Ffoo%25252Fbar%25253Fhello%25253Dworld",
 			"https://example.com/foo/bar?hello=world", emptyOptions, false,
 		},
+		// escaped remote containing double escaped url as param
+		// test that we don't over-decode remote url breaking parameters
+		{
+			"http://localhost/x/http%3A%2F%2Fexample.com%2Ffoo%2Fbar%3Fhello%3Dworld%26url%3Dhttps%253A%252F%252Fwww.example.com%252F%253Ffoo%253Dbar%2526hello%253Dworld",
+			"http://example.com/foo/bar?hello=world&url=https%3A%2F%2Fwww.example.com%2F%3Ffoo%3Dbar%26hello%3Dworld", emptyOptions, false,
+		},
 	}
 
 	for _, tt := range tests {
