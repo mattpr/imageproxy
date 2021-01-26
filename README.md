@@ -44,8 +44,7 @@ The URL of the original image to load is specified as the remainder of the
 path and may be URL encoded.  For example,
 `http://localhost/200/https://willnorris.com/logo.jpg`.
 
-In order to [optimize caching][], it is recommended that URLs not contain query
-strings.
+If remote image URLs contain query strings, it is recommended to URL-encode them when passing to imageproxy in order to [optimize caching][].
 
 [optimize caching]: http://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
 
