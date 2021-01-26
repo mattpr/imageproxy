@@ -320,7 +320,7 @@ func (r Request) String() string {
 // NewRequest parses an http.Request into an imageproxy Request.  Options and
 // the remote image URL are specified in the request path, formatted as:
 // /{options}/{remote_url}.  Options may not be omitted, but `x` or `0x0` can
-// be used as noop option (/x/{remote_url}).  
+// be used as noop option (/x/{remote_url}).
 // The remote URL must be an absolute "http(s)" URL unless BaseURL is set.
 // The remote URL may be URL encoded.
 //
@@ -347,7 +347,7 @@ func NewRequest(r *http.Request, baseURL *url.URL) (*Request, error) {
 		return nil, URLError{fmt.Sprintf("unable to parse remote URL: %v", err), r.URL}
 	}
 
-	req.Options = ParseOptions(parts[0])		
+	req.Options = ParseOptions(parts[0])
 
 	if baseURL != nil {
 		req.URL = baseURL.ResolveReference(req.URL)
@@ -394,6 +394,7 @@ func parseURL(s string) (*url.URL, error) {
 
 var reAbsURL = regexp.MustCompile(`^https?`)
 var reDecodedURL = regexp.MustCompile(`^https?://`)
+
 func decodeURL(s string) (string, error) {
 	var err error
 	// don't try to decode unless looks like abs url

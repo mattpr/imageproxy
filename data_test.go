@@ -258,7 +258,7 @@ func TestNewRequest_BaseURL(t *testing.T) {
 			"http://localhost/x/../foo/bar",
 			"http://example.com/foo/bar", emptyOptions, false,
 		},
-		// relative remote urls should not have URL Decoding even if 
+		// relative remote urls should not have URL Decoding even if
 		// they start with http... (dirname)
 		{
 			"http://example.com/hello/",
@@ -266,7 +266,6 @@ func TestNewRequest_BaseURL(t *testing.T) {
 			"http://example.com/hello/httpdir/rela%20tive", emptyOptions, false,
 		},
 	}
-
 
 	for _, tt := range tests {
 		req, err := http.NewRequest("GET", tt.URL, nil)
